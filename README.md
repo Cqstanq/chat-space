@@ -41,14 +41,14 @@ Things you may want to cover:
 |message|text||
 |image|text||
 |user_id|integer|null: false, foreign_key: true|
-##Association
+## Association
 - belongs_to :user
 
 # groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |group_name|string|null :false|
-##Association
+## Association
 - has_many :users_groups
 - has_many :users, through: :usres_groups
 
@@ -57,7 +57,7 @@ Things you may want to cover:
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
-##Association
+## Association
 - belongs_to :user
 - belongs_to :group
 
