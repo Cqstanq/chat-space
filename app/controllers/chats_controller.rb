@@ -1,6 +1,6 @@
 class ChatsController < ApplicationController
   
-  def chat
+  def index
   end
   
 end

@@ -1,2 +1,10 @@
+@import "config/colors";
+@import "config/font-size";
 @import "variable";
 @import "reset";
+@import "font-awesome";
+@import "mixins/vendor_prefix";
+@import "chats/wrapper.scss";
+@import "chats/chat.scss";
+@import "chats/side_bar.scss";
+
