@@ -1,5 +1,30 @@
 .wrapper
-  
+
   = render 'side_bar'
 
-  = render 'chat'
+  
+  .chat
+    .header
+      .left-header
+        .left-header__title
+          グループ名
+        %ul.left-header__members
+          Member：
+          %li.member
+            メンバー名
+          %li.member
+            メンバー名
+      .right-header
+        Edit
+    
+    .messages
+      = render @chats
+
+    .form
+      = form_for [@group, @chat] do |f|
+        = f.text_field :content, class: 'form__message', placeholder: ' type a message'
+        .form__mask
+          = f.label :image, class: 'form__mask__image' do
+            = fa_icon 'picture-o', class: 'icon'
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'
