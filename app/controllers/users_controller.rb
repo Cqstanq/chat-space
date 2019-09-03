@@ -1,6 +1,8 @@
 class UsersController < ApplicationController
 
   def edit
+    @chat = Chat.new
+    @chats = 
   end
 
   def update
