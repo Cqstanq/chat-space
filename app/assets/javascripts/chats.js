@@ -9,7 +9,7 @@ $(function(){
                   - if ${chat.content}.present?
                     %p.lower-message__content
                       = ${chat.content}
-                    = image_tag ${chat.image.url}, class: 'lower-message__image' if chat.image.present?`
+                    = image_tag ${chat.image.url}, class: 'lower-message__image' if ${chat.imgage}.present?`
   }  
   $('#new_chat').on('submit', function(e){
     e.preventDefault();

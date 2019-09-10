@@ -10,7 +10,7 @@ class ChatsController < ApplicationController
     @chat = @group.chats.new(chat_params)
     if @chat.save
       respond_to do |format|
-      format.html {render :index}
+      format.html
       format.json
       end
     else

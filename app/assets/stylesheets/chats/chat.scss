@@ -3,29 +3,38 @@
   height: 100vh;
   .header {
     box-sizing: border-box;
+    z-index: 3;
+    background-color: white;
+    width: calc(100vw - 300px);
     height: 100px;
+    position: fixed;
     padding: 0 40px;
     .left-header {
       float: left;
+      z-index: 5;
       &__title {
         color: #333;
         font-size: 20px;
         margin-top: 35px;
+        z-index: 5;
       }
       &__members {
         @include flexbox;
+        z-index: 5;
         color: $light_gray;
         font-size: 12px;
         margin-top: 15px;
         .member {
           display: inline-block;
           padding-right: 5px;
+          z-index: 5;
         }
       }
     }
     .right-header {
       border: 1px solid $light_blue;
       color: $light_blue;
+      z-index: 5;
       float: right;
       height: 40px;
       line-height: 40px;
@@ -41,8 +50,8 @@
   .messages {
     background-color: #FAFAFA;
     box-sizing: border-box;
-    padding: 46px 40px 0;
-    height: calc(100vh - 100px - 90px);
+    padding: 146px 40px 180px;
+    height: calc(100% + 146px + 180px);
     z-index: 1;
     .message {
       .upper-message {
@@ -71,31 +80,39 @@
 
   .form {
     background-color: #DDDDDD;
+    position: fixed;
+    width: calc(100% - 300px);
     box-sizing: border-box;
+    bottom: 0;
     height: 90px;
     padding: 20px 50px 20px 40px;
     z-index: 5;
     &__message {
       border: none;
       float: left;
+      z-index: 5;
       height: 50px;
       width: calc(100% - 150px);
     }
     &__mask {
       background-color: $white;
+      z-index: 5;
       float: left;
       height: 50px;
       padding-right: 10px;
       &__image {
         font-size: 20px;
+        z-index: 5;
         line-height: 50px;
       }
       .hidden {
         display: none;
+        z-index: 5;
       }
     }
     &__submit {
       background-color: $light_blue;
+      z-index: 5;
       border: none;
       color: $white;
       float: right;
