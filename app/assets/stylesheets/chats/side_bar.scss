@@ -1,5 +1,6 @@
 .side-bar {
   box-sizing: border-box;
+  height: 100%;
   color: $white;
   width: 300px;
   .header {
@@ -15,6 +16,7 @@
     &__lists {
       display: inline-block;
       float: right;
+      height: 100%;
       .list {
         display: inline-block;
       }
