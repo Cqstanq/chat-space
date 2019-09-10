@@ -10,7 +10,7 @@ class ChatsController < ApplicationController
     @chat = @group.chats.new(chat_params)
     if @chat.save
       respond_to do |format|
-      format.html
+      format.html { redirect_to group_chats_path(@group) }
       format.json
       end
     else
