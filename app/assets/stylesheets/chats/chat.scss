@@ -1,6 +1,5 @@
 .chat {
   width: calc(100% - 300px);
-  height: 100vh;
   .header {
     box-sizing: border-box;
     z-index: 3;
@@ -48,12 +47,12 @@
   }
 
   .messages {
-    background-color: #FAFAFA;
     box-sizing: border-box;
-    padding: 146px 40px 180px;
-    height: calc(100% + 146px + 180px);
+    padding: 100px 40px 90px;
+    width: calc(100% - 80px - 300px);
     z-index: 1;
     .message {
+      padding: 46px 0 0 0;
       .upper-message {
         display: flex;
         &__user-name {
@@ -72,7 +71,6 @@
         &__content {
           color: $black;
           font-size: 14px;
-          margin-bottom: 40px;
         }
       }
     }
@@ -84,8 +82,8 @@
     width: calc(100% - 300px);
     box-sizing: border-box;
     bottom: 0;
-    height: 90px;
     padding: 20px 50px 20px 40px;
+    height: 90px;
     z-index: 5;
     &__message {
       border: none;

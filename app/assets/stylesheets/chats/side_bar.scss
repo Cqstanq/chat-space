@@ -1,7 +1,7 @@
 .side-bar {
   box-sizing: border-box;
-  height: 100%;
   color: $white;
+  background-color: $side_blue_light;
   width: 300px;
   .header {
     background-color: $side_blue_dark;
@@ -32,8 +32,8 @@
 
   .groups {
     background-color: $side_blue_light;
-    height: calc(100% + 326px);
     text-decoration: none;
+    width: 260px;
     padding: 100px 20px 0 20px;
     .group {
       box-sizing: border-box;
