@@ -18,11 +18,11 @@ $(function(){
                       ${result_content}
                     </div>
                     <div class='lower-message__image'>
-                      ${result_image}
+                      <img src = "${result_image}">
                     </div>
                   </div>
                 </div>`
-    return html    
+    return html
   }
   $('#new_chat').on('submit', function(e){
     e.preventDefault();
@@ -40,8 +40,7 @@ $(function(){
       var html = buildChat(chat);
       $('.messages').append(html);
       $('#chat_content').val('');
-      $(".messages").animate({scrollTop: 10000000000})
-      return false;
+      $('.messages').animate({scrollTop: $('.message')[0].scrollHeight})
     })
     .fail(function(){
       alert('メッセージが送信されませんでした');
