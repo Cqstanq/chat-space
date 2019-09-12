@@ -1,8 +1,7 @@
 $(function(){
   function buildChat(chat){
-    var content = chat.content;
     var result_image = chat.image ? `<img src="${chat.image}">` : '';
-    var result_content = (content ? content : '')
+    var result_content = chat.content ? chat.content : '';
     var html = `<div class="message">
                   <div class="upper-message">
                     <div class="upper-message__user-name">
@@ -38,7 +37,7 @@ $(function(){
     .done(function(chat){
       var html = buildChat(chat);
       $('.messages').append(html);
-      $('#chat_content').val('');
+      $('#chat_content').reset()
       $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight});
       return false
     })
