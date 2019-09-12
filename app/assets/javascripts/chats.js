@@ -1,8 +1,8 @@
 $(function(){
   function buildChat(chat){
-    var image = chat.image;
+    //var image = chat.image
     var content = chat.content;
-    var result_image = (image ? image : '');
+    var result_image = chat.image ? `<img src="${chat.image}">` : '';
     var result_content = (content ? content : '')
     var html = `<div class="message">
                   <div class="upper-message">
@@ -18,7 +18,7 @@ $(function(){
                       ${result_content}
                     </div>
                     <div class='lower-message__image'>
-                      <img src = "${result_image}">
+                      ${result_image}
                     </div>
                   </div>
                 </div>`
@@ -40,7 +40,8 @@ $(function(){
       var html = buildChat(chat);
       $('.messages').append(html);
       $('#chat_content').val('');
-      $('.messages').animate({scrollTop: $('.message')[0].scrollHeight})
+      $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight});
+      return false
     })
     .fail(function(){
       alert('メッセージが送信されませんでした');

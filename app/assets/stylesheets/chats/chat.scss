@@ -1,5 +1,5 @@
 .chat {
-  width: calc(100% - 300px);
+  width: calc(100vw - 300px);
   .header {
     box-sizing: border-box;
     z-index: 3;
@@ -48,8 +48,11 @@
 
   .messages {
     box-sizing: border-box;
-    padding: 100px 40px 90px;
-    width: calc(100% - 80px - 300px);
+    margin: 100px 0 90px 0;
+    padding: 0 0 0 40px;
+    height: calc(100vh - 190px);
+    overflow: scroll;
+    width: calc(100vw - 300px);
     z-index: 1;
     .message {
       padding: 46px 0 0 0;
