@@ -37,8 +37,8 @@ $(function(){
     .done(function(chat){
       var html = buildChat(chat);
       $('.messages').append(html);
-      $('#chat_content').reset()
       $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight});
+      $('form')[0].reset();
       return false
     })
     .fail(function(){
