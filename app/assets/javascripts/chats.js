@@ -1,6 +1,5 @@
 $(function(){
   function buildChat(chat){
-    //var image = chat.image
     var content = chat.content;
     var result_image = chat.image ? `<img src="${chat.image}">` : '';
     var result_content = (content ? content : '')
