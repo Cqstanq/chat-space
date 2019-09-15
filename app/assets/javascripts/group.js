@@ -34,20 +34,16 @@ $(function() {
     })
 
     .done(function(users){
-      if (input.length === 0) {
-        $("#user-search-result").empty();
-      }
-      else if (input.length !== 0) {
-        $("#user-search-result").empty();
+      $("#user-search-result").empty();
+      if (input.length !== 0 ) {
         users.forEach(function(user){
           var html = appendUser(user)
           $("#user-search-result").append(html)
-        });
+        })
       }
       else {
-        $("#user-search-result").empty();
         var html = appendErr("一致するユーザーはいません");
-        $("#user-search-result").append(html);
+          $("#user-search-result").append(html);
       }
     })
 
