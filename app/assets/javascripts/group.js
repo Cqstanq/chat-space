@@ -35,17 +35,17 @@ $(function() {
 
     .done(function(users){
       $("#user-search-result").empty();
-      if (input.length !== 0 ) {
-        users.forEach(function(user){
-          var html = appendUser(user)
-          $("#user-search-result").append(html)
-        })
-      }
-      else {
-        var html = appendErr("一致するユーザーはいません");
+        if (input.length !== 0 ) {
+          users.forEach(function(user){
+            var html = appendUser(user)
+            $("#user-search-result").append(html)
+          });
+        }
+        else {
+          var html = appendErr("一致するユーザーはいません");
           $("#user-search-result").append(html);
-      }
-    })
+        }
+      })
 
     
     .fail(function(){
