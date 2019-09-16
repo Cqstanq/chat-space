@@ -33,6 +33,7 @@
     .right-header {
       border: 1px solid $light_blue;
       color: $light_blue;
+      text-decoration: none;
       z-index: 5;
       float: right;
       height: 40px;
@@ -70,7 +71,7 @@
         }
       }
       .lower-message {
-        margin-top: 10px;
+        padding: 10px 0 10px 0;
         &__content {
           color: $black;
           font-size: 14px;
