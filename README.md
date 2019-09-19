@@ -31,14 +31,14 @@ Things you may want to cover:
 |mail|string|null: false|
 |password|string|null: false|
 ## Association
-- has_many :masseges
+- has_many :chats
 - has_many :users_groups
 - has_many :groups, through: :users_groups
 
-# messagesテーブル
+# chatsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|message|text||
+|content|text||
 |image|text||
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
@@ -51,7 +51,7 @@ Things you may want to cover:
 |------|----|-------|
 |name|string|null :false|
 ## Association
-- has_many :messages
+- has_many :chats
 - has_many :users_groups
 - has_many :users, through: :usres_groups
 
